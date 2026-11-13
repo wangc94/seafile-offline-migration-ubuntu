@@ -1,0 +1,319 @@
+{
+  "schema_version": 1,
+  "release": "v0.8.0-baseline.1",
+  "bundle_name": "Seafile-Offline-Migration",
+  "status": "reproduced; Ubuntu restore and upgrade acceptance pending",
+  "upstream_installer": "v0.8",
+  "platform": "linux/amd64",
+  "files": [
+    {
+      "path": "01-images/docker-images.tar",
+      "size": 2187766272,
+      "sha256": "441538a1272932f6029b282f7e61f5461e78a91758b63b4f6ce43f3aeaabb6be",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "01-images/docker-images.tar.sha256",
+      "size": 96,
+      "sha256": "792635bfd0cde4306878c9e94be406af3a3760939fa88c0ab89159783964bbb7",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "01-images/seadoc-image.tar",
+      "size": 453349376,
+      "sha256": "44edc680f0f09d8193259dbeb61f56abfd74a34dfd64040b29bb87b83018b084",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "01-images/seadoc-image.tar.sha256",
+      "size": 93,
+      "sha256": "bd20e20bf3b7b9dbc8105978ebc785cd9874b9ed6032812b00d1cc89fabe4c2f",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "02-config/caddy-data.tar",
+      "size": 10240,
+      "sha256": "6034235290ce0104e7c890ffd3e50d51a1584f0b5c7caf9ddce7b41fc2daf714",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "02-config/caddy-data.tar.sha256",
+      "size": 93,
+      "sha256": "425b2f974244ba5234350d789d27c301cc4052a4215bee5d41051ab29dea6c38",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "02-config/compose-resolved.yml",
+      "size": 5254,
+      "sha256": "7824ff658e0a364e9e6af348a53d3ef01ef593826416ef397d4c9ad7c313b710",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "02-config/seafile-config.tar",
+      "size": 40960,
+      "sha256": "80d2260b1bd2e940f33534d47625d2709fb10e1d325ee55b8fd29d7acf752afc",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "02-config/seafile-config.tar.sha256",
+      "size": 97,
+      "sha256": "36acc4c4fe3e788fcbc747242189f788991d7f8506bf35691b3b066eb6697d1d",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "02-config/ubuntu/README.md",
+      "size": 1157,
+      "sha256": "cf67267a3a92fc354735de3dc203bbfb64c1c8f6ab8c13a2a0a29cd17d14b5b0",
+      "mode": 420,
+      "storage": "git",
+      "source": "installer/compose/README.md"
+    },
+    {
+      "path": "02-config/ubuntu/caddy.yml",
+      "size": 651,
+      "sha256": "a8bc2a0f51f1e33db020200f9b077921034e9aaf7b0d8046fd9106e3cfb9c964",
+      "mode": 420,
+      "storage": "git",
+      "source": "installer/compose/caddy.yml"
+    },
+    {
+      "path": "02-config/ubuntu/onlyoffice.yml",
+      "size": 1683,
+      "sha256": "e58fd6b0daa2ff8050b046bd7d6bb4d255a356d8072cee0dc42f12255b0ec05f",
+      "mode": 420,
+      "storage": "git",
+      "source": "installer/compose/onlyoffice.yml"
+    },
+    {
+      "path": "02-config/ubuntu/seadoc.yml",
+      "size": 1347,
+      "sha256": "b849c77a4f564e2f1fe7731acfe72bf8374172076cfcf2ccec4f6fff0dd66618",
+      "mode": 420,
+      "storage": "git",
+      "source": "installer/compose/seadoc.yml"
+    },
+    {
+      "path": "02-config/ubuntu/seafile-server.yml",
+      "size": 4317,
+      "sha256": "e6c19c5b9436d9a70c7f55b4b2dabbf05992105b83217060166ead6291d41af5",
+      "mode": 420,
+      "storage": "git",
+      "source": "installer/compose/seafile-server.yml"
+    },
+    {
+      "path": "03-database/mariadb-data.tar",
+      "size": 229877760,
+      "sha256": "12f7f1cc6ca498ce8a6c43cbc193bfdf1994b51e7b6cab8c23e0a502e4890397",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "03-database/mariadb-data.tar.sha256",
+      "size": 97,
+      "sha256": "5960a692bb4dfea2c4892bdadc76e04a258a4abd333840522b0418053901b309",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "04-seafile-data/seafile-data.tar",
+      "size": 1914880,
+      "sha256": "716290e97dd67ed499921480f6a6422f2a0f753ffc44eb40470ccc175fe0bcf4",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "04-seafile-data/seafile-data.tar.sha256",
+      "size": 101,
+      "sha256": "5c656fda410737ae34507d0bfbbdf1d771e396fd0af550a357b1a347465189f6",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "05-onlyoffice/onlyoffice-data.tar",
+      "size": 675840,
+      "sha256": "0c6c401b419aadd0c8ed67fecc58a824ae9ab90cf2b332b26102ab544f0632b9",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "05-onlyoffice/onlyoffice-data.tar.sha256",
+      "size": 102,
+      "sha256": "3473f88fa9d48854d7590aca6d0b3083913015432bd91d5ae4148aa8aab6f862",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "05-onlyoffice/onlyoffice-fonts.tar",
+      "size": 750540800,
+      "sha256": "fd37ee0611ffb22e8985db29054e158b369ba128f51e2f147695e8ca78b029b3",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "05-onlyoffice/onlyoffice-fonts.tar.sha256",
+      "size": 103,
+      "sha256": "1e75ce35d04ddc72c795e459038f9357a1a8fef4014508cf00490928007ad7ce",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "06-docker-volumes/postgresql/data.tar",
+      "size": 54640640,
+      "sha256": "f12d1a6baad2a040a0c6975ec31a412e29a8aeaf595f7710e2bf5d9a009f4811",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "06-docker-volumes/postgresql/data.tar.sha256",
+      "size": 106,
+      "sha256": "1b09a5dd991a32052c59766c84a3a07ce32c61bfaa06eb075536d53a1433c2f1",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "06-docker-volumes/rabbitmq/data.tar",
+      "size": 3431823360,
+      "sha256": "40bb46010cda9a1a0907aeb7abf5459875efdc731211e2500329ec20c7abb741",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "06-docker-volumes/rabbitmq/data.tar.sha256",
+      "size": 104,
+      "sha256": "ef52687c812fe1d82375c6d3a098af66702b6ac2b4e0d3606aff79279a8238ad",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "06-docker-volumes/redis/data.tar",
+      "size": 10240,
+      "sha256": "af33a437e6a9d854116bc5247c12f680b742530bf7ba5fedaa9d5aa3ab0bbab6",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "06-docker-volumes/redis/data.tar.sha256",
+      "size": 101,
+      "sha256": "264447a35f5ade980070acb784068dea2c712557e71bbb69bb1dd7df3e0b6de4",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "07-patches/onlyoffice-patch-sources.tar",
+      "size": 30720,
+      "sha256": "72a696dc859cac92708477cf52bc9b255c3c0a1c07a7610862377610b6f8b2b2",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "07-patches/onlyoffice-patch-sources.tar.sha256",
+      "size": 108,
+      "sha256": "7eba3b6651378b0a3cc39c094970df542abea590671588b4a5dbfbd7bc24240e",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "09-manifests/archive-inventory.tsv",
+      "size": 1290,
+      "sha256": "064bff44f3a2e5a904bc27f95c0037110da6dabe84fb522d65b32babf4e995ec",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "09-manifests/compose-images.txt",
+      "size": 132,
+      "sha256": "309b7966c7846858d68c9351dc20a9d5a507a5fb18c60f430af990bd12c4cd8d",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "09-manifests/container-inventory.txt",
+      "size": 5024,
+      "sha256": "2415c221b9ee81aa38a8a5843908a330b67af96362df3d8a969f76b59fc3b3c0",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "09-manifests/containers-inspect.json",
+      "size": 79965,
+      "sha256": "bff6f2aa127c518fbd29a481a8acf9f6e9704959a97b2203dfc6f76f6ac0dcd4",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "09-manifests/docker-environment.txt",
+      "size": 672,
+      "sha256": "d3d75669041392d50b2fe1ba4e5b8a4f211a0e4b1c965d79e05b69555a966d9f",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "09-manifests/docker-images-inspect.json",
+      "size": 17540,
+      "sha256": "99715c2a773bcfd6a1dbb03501eada0d7f68d708b937490a51fd080d346c351c",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "09-manifests/docker-images.txt",
+      "size": 173,
+      "sha256": "c370488bdad8c9fb74e8cf8ac250528a9fc9434f6b53dbe466759fcd97eaf56e",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "09-manifests/docker-volumes.json",
+      "size": 1251,
+      "sha256": "1c41280b58e9e1a7bdfd57d3be5f62bdd5f871bd84ac89af79432319adf709ee",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "09-manifests/rabbitmq-status.txt",
+      "size": 3218,
+      "sha256": "d2a2adff6295a75e6657b5510554fd71790ebcc0efe095222d3c1ce28b1033aa",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "09-manifests/seadoc-image-inspect.json",
+      "size": 3396,
+      "sha256": "c02fe04dd226217a367fdc209e501d49d444dcced2afd4164a2357810159b322",
+      "mode": 384,
+      "storage": "asset"
+    },
+    {
+      "path": "README.md",
+      "size": 13402,
+      "sha256": "b775dd7b6dc15e5893015a8fe51935fcbf6473424fad586c648104d7718a8fb9",
+      "mode": 420,
+      "storage": "git",
+      "source": "installer/README.md"
+    },
+    {
+      "path": "SHA256SUMS",
+      "size": 4269,
+      "sha256": "72d1cd6c9993cfaed254ec212265a868fc372a989e2d21d61a5eca5d7d157c52",
+      "mode": 420,
+      "storage": "git",
+      "source": "releases/v0.8.0-baseline.1/SHA256SUMS"
+    },
+    {
+      "path": "install.sh",
+      "size": 58207,
+      "sha256": "bb1d6dbee0aa0a9ad9699cf3502e060045ba07adbbdf85fc7d1ea205825c454a",
+      "mode": 493,
+      "storage": "git",
+      "source": "installer/install.sh"
+    }
+  ]
+}

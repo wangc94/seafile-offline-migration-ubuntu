@@ -1,0 +1,22 @@
+# Business data, credentials and generated delivery files never enter Git.
+/.local/
+/dist/
+/private-assets/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+*.sql
+*.sqlite*
+compose-resolved.y*ml
+containers-inspect.json
+docker-images-inspect.json
+seadoc-image-inspect.json
+*.log
+

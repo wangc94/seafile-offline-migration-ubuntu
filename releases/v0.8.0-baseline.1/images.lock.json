@@ -1,0 +1,71 @@
+{
+  "provenance": "recorded Docker inspect metadata; not a registry lookup",
+  "images": [
+    {
+      "Id": "sha256:0d0945c57f75b3a3b9ebe71aedaaad005fa5305054e8fca3d2e42a8c92b43b5e",
+      "RepoTags": [
+        "mariadb:10.11"
+      ],
+      "RepoDigests": [
+        "mariadb@sha256:0d0945c57f75b3a3b9ebe71aedaaad005fa5305054e8fca3d2e42a8c92b43b5e"
+      ],
+      "Architecture": "amd64",
+      "Os": "linux"
+    },
+    {
+      "Id": "sha256:423328ee377374c48a30c2aa416e4afedf621faff068f97966cb9b87a28550bd",
+      "RepoTags": [
+        "onlyoffice/documentserver:8.1.0.1"
+      ],
+      "RepoDigests": [
+        "onlyoffice/documentserver@sha256:423328ee377374c48a30c2aa416e4afedf621faff068f97966cb9b87a28550bd"
+      ],
+      "Architecture": "amd64",
+      "Os": "linux"
+    },
+    {
+      "Id": "sha256:97ec88159e6d7cfb5ddef9015386087d58a912de80112f06ebdfa78fa5989901",
+      "RepoTags": [
+        "redis:latest"
+      ],
+      "RepoDigests": [
+        "redis@sha256:97ec88159e6d7cfb5ddef9015386087d58a912de80112f06ebdfa78fa5989901"
+      ],
+      "Architecture": "amd64",
+      "Os": "linux"
+    },
+    {
+      "Id": "sha256:b0c90832126bf432db908449f1bb450211e6bbf75a2193bab3399e2a9636eccf",
+      "RepoTags": [
+        "seafileltd/seafile-mc:13.0-latest"
+      ],
+      "RepoDigests": [
+        "seafileltd/seafile-mc@sha256:b0c90832126bf432db908449f1bb450211e6bbf75a2193bab3399e2a9636eccf"
+      ],
+      "Architecture": "amd64",
+      "Os": "linux"
+    },
+    {
+      "Id": "sha256:b6f839ca5ee0bfb43466512b9edd6bc1acf9165b0e234d5620e0f46f2bc38300",
+      "RepoTags": [
+        "seafileltd/sdoc-server:2.0-latest"
+      ],
+      "RepoDigests": [
+        "seafileltd/sdoc-server@sha256:b6f839ca5ee0bfb43466512b9edd6bc1acf9165b0e234d5620e0f46f2bc38300"
+      ],
+      "Architecture": "amd64",
+      "Os": "linux"
+    },
+    {
+      "Id": "sha256:c0a1707abe5814ed682c43a1182ded7fe3975405b47462c9df48a9f4e3a525d7",
+      "RepoTags": [
+        "lucaslorentz/caddy-docker-proxy:2.12-alpine"
+      ],
+      "RepoDigests": [
+        "lucaslorentz/caddy-docker-proxy@sha256:c0a1707abe5814ed682c43a1182ded7fe3975405b47462c9df48a9f4e3a525d7"
+      ],
+      "Architecture": "amd64",
+      "Os": "linux"
+    }
+  ]
+}

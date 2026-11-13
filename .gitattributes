@@ -1,0 +1,10 @@
+* text=auto eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+# Preserve the imported release bytes, even with core.autocrlf enabled.
+installer/** -text
+releases/**/SHA256SUMS -text
+
