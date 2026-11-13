@@ -6,5 +6,6 @@
 *.json text eol=lf
 # Preserve the imported release bytes, even with core.autocrlf enabled.
 installer/** -text
+releases/**/source/** -text
 releases/**/SHA256SUMS -text
 

@@ -6,9 +6,6 @@ import offline
 
 
 def main():
-    patch = offline.ROOT / "installer/patches/onlyoffice/utils.py"
-    if offline.digest(patch) != "900ba73c637ef3271770fb6fd22ee7b90644d293706457fed59a30c61b83a926":
-        offline.fail("Public ONLYOFFICE patch differs from the imported baseline")
     for manifest in sorted((offline.ROOT / "releases").glob("*/manifest.json")):
         data = offline.load_manifest(offline.ROOT, manifest.parent.name)
         source = {}

@@ -47,7 +47,7 @@ sudo bash ./install.sh
 - 将私有素材库额外备份到受控磁盘。GitHub 不保存这些对象；遗失全部素材副本后无法还原业务包。
 - 使用 `python tools/offline.py backup-assets --output E:/seafile-offline-assets-backup` 复制并校验当前版本需要的素材；目标必须不存在。
 - 不重新执行 `docker pull ...latest` 代替历史镜像，不重打包原始数据库 TAR。原始归档本身就是锁定的输入。
-- 调整安装器后建立新候选包、生成其 SHA256SUMS，再用新 `--release` 捕获并验证。已冻结的版本锁不能随意修改；重建旧版时检出旧标签。详见[复现协议](docs/10-reproducibility.md)。
+- 调整安装器后建立新候选包、生成其 SHA256SUMS，再用新 `--release` 捕获并验证。每版在 `releases/<版本>/source/` 独立冻结源码；已冻结的版本锁不能随意修改。历史版本可用 `--release` 指定，或检出对应标签。详见[复现协议](docs/10-reproducibility.md)。
 
 | 位置 | 用途 |
 | --- | --- |

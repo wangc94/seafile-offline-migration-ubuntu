@@ -186,6 +186,10 @@ class ReproductionTests(unittest.TestCase):
         self.assertEqual(offline.inventory(output), offline.inventory(package))
         for name in offline.inventory(package):
             self.assertEqual((package / name).read_bytes(), (output / name).read_bytes())
+        # Editing the next installer must not mutate a frozen historical release.
+        (repo / "installer/install.sh").write_bytes(b"a future installer revision\n")
+        offline.build(repo, assets, data, self.base / "captured-after-edit")
+        self.assertEqual((self.base / "captured-after-edit/install.sh").read_bytes(), payloads["install.sh"])
         with self.assertRaises(offline.BundleError):
             offline.capture(repo, package, assets, self.release)
 

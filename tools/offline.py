@@ -220,11 +220,20 @@ def capture(root, package, assets, release):
         sha = sums.get(name) or digest(src)
         e = {"path": name, "size": src.stat().st_size, "sha256": sha,
              "mode": 0o755 if name == "install.sh" else 0o600}
-        source = SOURCE_MAP.get(name)
+        working_source = SOURCE_MAP.get(name)
+        source = f"releases/{release}/source/{name}" if working_source else None
         if name == "SHA256SUMS":
             source = f"releases/{release}/SHA256SUMS"
         if source:
             e.update(storage="git", source=source, mode=0o755 if name == "install.sh" else 0o644)
+            # Editable working sources and immutable per-release sources are separate.
+            if working_source:
+                working = confined(root, working_source)
+                check(src, e)
+                if working.exists():
+                    check(working, e)
+                else:
+                    copy_checked(src, working, e)
             dst = confined(root, source)
             check(src, e)
             if dst.exists():

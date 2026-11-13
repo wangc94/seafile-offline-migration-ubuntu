@@ -8,7 +8,7 @@
 
 ## 存储布局
 
-`manifest.json` 的 `storage=git` 指向仓库中的源文件；`storage=asset` 指向素材根目录下 `objects/sha256/<完整 SHA256>`。清单还记录文件路径、大小和分发权限。`images.lock.json` 只保存原 inspect 中 Image ID、RepoTags、RepoDigests、OS 和架构，不含环境变量。Image ID 和 RepoDigest 各自照实保存，不能一般性认为两者相等。
+`manifest.json` 的 `storage=git` 指向 `releases/<版本>/source/` 内的独立冻结副本（SHA256SUMS 存在版本根目录）；`storage=asset` 指向素材根目录下 `objects/sha256/<完整 SHA256>`。`installer/` 是可维护工作副本，修改它不会改变历史发布输入。清单还记录文件路径、大小和分发权限。`images.lock.json` 只保存原 inspect 中 Image ID、RepoTags、RepoDigests、OS 和架构，不含环境变量。Image ID 和 RepoDigest 各自照实保存，不能一般性认为两者相等。
 
 所有 12 个原始 TAR、12 个独立 `.sha256`、resolved Compose 和原始运行清单均进入私有素材库。源码只采用明确允许的 7 个文件，再加根 SHA256SUMS。ONLYOFFICE 补丁在源码目录另留可读副本，部署仍从锁定配置 TAR 使用原副本；修改可读副本不会隐式改变冻结包。
 
@@ -30,9 +30,9 @@ python tools/offline.py --release v0.8.0-baseline.1 capture --package C:/Users/p
 
 1. 检出工作分支，修改 `installer/`、设计和验收记录，不动旧包/私有原对象。
 2. 在仓库外受控位置制作新候选包；仅在有意改变输入时生成新 SHA256SUMS。
-3. 分配新的版本名，使用 `--release <新版本> capture`。已有源码内容若与候选不同，capture 会拒绝覆盖；应先把已评审的新源码同步到 `installer/`，核对后再捕获。
+3. 分配新的版本名，使用 `--release <新版本> capture`。工具核对候选包与 `installer/` 工作副本，再将源码独立冻结到新版本目录。工作副本若与候选不同会拒绝继续；应先将已评审的新源码同步到 `installer/`。
 4. 将工具的默认版本、README 与交接同步到新版本。重建、校验、异常测试和确定性打包；按影响做目标机验收。
-5. 提交并创建对应标签。旧版依赖旧标签中的 `installer/`，所以必须检出旧标签重建旧版本，不能在新源码上跳过哈希保护。
+5. 提交并创建对应标签。历史版本使用 `--release <旧版本>` 选择冻结的源码与素材，不依赖当前 `installer/` 工作副本；检出旧标签还能取回当时的构建工具。
 
 旧标签是历史恢复入口。私有素材按哈希追加，不因升级删除历史对象。Git 提交不会自动备份素材。
 

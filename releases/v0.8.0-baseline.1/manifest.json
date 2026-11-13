@@ -75,7 +75,7 @@
       "sha256": "cf67267a3a92fc354735de3dc203bbfb64c1c8f6ab8c13a2a0a29cd17d14b5b0",
       "mode": 420,
       "storage": "git",
-      "source": "installer/compose/README.md"
+      "source": "releases/v0.8.0-baseline.1/source/02-config/ubuntu/README.md"
     },
     {
       "path": "02-config/ubuntu/caddy.yml",
@@ -83,7 +83,7 @@
       "sha256": "a8bc2a0f51f1e33db020200f9b077921034e9aaf7b0d8046fd9106e3cfb9c964",
       "mode": 420,
       "storage": "git",
-      "source": "installer/compose/caddy.yml"
+      "source": "releases/v0.8.0-baseline.1/source/02-config/ubuntu/caddy.yml"
     },
     {
       "path": "02-config/ubuntu/onlyoffice.yml",
@@ -91,7 +91,7 @@
       "sha256": "e58fd6b0daa2ff8050b046bd7d6bb4d255a356d8072cee0dc42f12255b0ec05f",
       "mode": 420,
       "storage": "git",
-      "source": "installer/compose/onlyoffice.yml"
+      "source": "releases/v0.8.0-baseline.1/source/02-config/ubuntu/onlyoffice.yml"
     },
     {
       "path": "02-config/ubuntu/seadoc.yml",
@@ -99,7 +99,7 @@
       "sha256": "b849c77a4f564e2f1fe7731acfe72bf8374172076cfcf2ccec4f6fff0dd66618",
       "mode": 420,
       "storage": "git",
-      "source": "installer/compose/seadoc.yml"
+      "source": "releases/v0.8.0-baseline.1/source/02-config/ubuntu/seadoc.yml"
     },
     {
       "path": "02-config/ubuntu/seafile-server.yml",
@@ -107,7 +107,7 @@
       "sha256": "e6c19c5b9436d9a70c7f55b4b2dabbf05992105b83217060166ead6291d41af5",
       "mode": 420,
       "storage": "git",
-      "source": "installer/compose/seafile-server.yml"
+      "source": "releases/v0.8.0-baseline.1/source/02-config/ubuntu/seafile-server.yml"
     },
     {
       "path": "03-database/mariadb-data.tar",
@@ -297,7 +297,7 @@
       "sha256": "b775dd7b6dc15e5893015a8fe51935fcbf6473424fad586c648104d7718a8fb9",
       "mode": 420,
       "storage": "git",
-      "source": "installer/README.md"
+      "source": "releases/v0.8.0-baseline.1/source/README.md"
     },
     {
       "path": "SHA256SUMS",
@@ -313,7 +313,7 @@
       "sha256": "bb1d6dbee0aa0a9ad9699cf3502e060045ba07adbbdf85fc7d1ea205825c454a",
       "mode": 493,
       "storage": "git",
-      "source": "installer/install.sh"
+      "source": "releases/v0.8.0-baseline.1/source/install.sh"
     }
   ]
 }
