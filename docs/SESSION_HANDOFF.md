@@ -21,7 +21,8 @@
 - 原包：`C:\Users\path\Downloads\Seafile-Offline-Migration`。
 - 私有素材：`C:\Users\path\Work\seafile-offline-assets`，默认自动定位于仓库同级。
 - 生成的目录、TAR、`.sha256`：`dist/`，Git 忽略，不上传公开渠道。
-- GitHub：`git@github.com:wangc94/seafile-offline-migration-ubuntu.git`；同步结论以本次交付记录为准。
+- GitHub：`git@github.com:wangc94/seafile-offline-migration-ubuntu.git`；main 和 `v0.8.0-baseline.1` 已推送，基线提交 `0ab8a15` 的 GitHub Actions 已通过。
+- 离线 Git 仓库备份：`dist/seafile-offline-repository.bundle`，可与私有素材库一起离线携带；可用 `git clone <bundle路径> <新目录>` 恢复。
 
 ## 接下来优先做
 

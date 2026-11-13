@@ -12,6 +12,8 @@
 | 完整目录重建 | 从 Git 工作区源码与独立素材库恢复 43 文件，逐项哈希和集合校验通过 |
 | 原包再次验证 | `verify --bundle <Downloads 原包>` 通过 |
 | 独立 Git clone 重建 | 新检出仓库 + 显式私有素材路径重建全部 43 文件并通过校验 |
+| 冻结源码重建 | manifest 指向独立 release/source 后再次重建全部 43 文件并通过校验 |
+| Linux 原生校验 | WSL 内执行 `sha256sum -c SHA256SUMS`，42 条全部 OK |
 | 两次整包 TAR 构建 | 长度和 SHA256 一致，见下方 |
 | Python 工具测试（Windows Python 3.13） | 18 项运行，17 通过、1 项符号链接测试因主机权限跳过 |
 | Python 工具测试（WSL Ubuntu Python 3） | 18 项全部通过，含符号链接拒绝测试 |
@@ -27,7 +29,13 @@
 9d44e7d68f41bcef1acd72f5aa64574d8f5890b1bb2b1319e9ef91d16c266918
 ```
 
-产物：`dist/Seafile-Offline-Migration/`、`dist/Seafile-Offline-Migration-v0.8.0-baseline.1.tar`、同名 `.tar.sha256`。第二次独立打包记录在 `.local/repro-check.tar`；这些文件均被 Git 忽略，不上传 GitHub。
+产物：`dist/Seafile-Offline-Migration/`、`dist/Seafile-Offline-Migration-v0.8.0-baseline.1.tar`、同名 `.tar.sha256`。第二次独立打包使用 `.local/repro-check.tar`，哈希一致。清理重复验证产物的请求被宿主自动审批以策略阻止，重复副本未删除；正式目录与 TAR 均完整。这些交付文件均被 Git 忽略，不上传 GitHub。
+
+## GitHub 与源码备份
+
+`main` 与 `v0.8.0-baseline.1` 已推送；远端标签解析到基线提交 `0ab8a15d2cef5396513e8725911ff73caa7e8538`。[该提交的 GitHub Actions](https://github.com/wangc94/seafile-offline-migration-ubuntu/actions/runs/43394108810) 已完成且结论 success。自动检查执行了公开版本锁校验、合成数据测试、Bash 语法与 Compose 解析，没有取得私有业务素材。
+
+另外生成 `dist/seafile-offline-repository.bundle` 并用 `git bundle verify` 检查完整历史；这是源码离线备份，仍须配合私有素材才能重建业务包。
 
 自动测试覆盖：捕获到重建的往返、输入缺失、同长度内容篡改、源码变化、重复输出、越界/重复/父子冲突路径、符号链接、额外/缺失文件、SHA 清单解析、归档确定性、损坏对象不可覆盖、私有备份独立性、拒绝备份到 Git 目录、失败不发布归档。
 
